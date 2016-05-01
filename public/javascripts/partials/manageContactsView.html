@@ -1,0 +1,27 @@
+<!-- javascripts/partials/manageContactsView.html -->
+
+<h2>Your Contacts!</h2>
+<div class="col-xs-12 well" ng-repeat="person in pc.people">
+  <uib-alert ng-show="deletedPerson === true" type="danger" close="deletedPerson = false">{{ person.name }} deleted!</uib-alert>
+    <h4><i class="glyphicon glyphicon-user"></i>&nbsp;{{ person.name }}</h4>
+    <h5><i class="glyphicon glyphicon-calendar"></i>&nbsp;{{ person.age }}</h5>
+    <h5><i class="glyphicon glyphicon-envelope"></i>&nbsp;{{ person.email }}</h5>
+  <button class="btn btn-success" ng-click="showEditDialog = true;"><i class="glyphicon glyphicon-pencil"></i></button>
+  <button class="btn btn-danger" ng-click="pc.removePerson(person);deletedPerson = true">Delete</button>
+  <div ng-show="showEditDialog === true" class="col-xs-12">
+    <h3>Edit Form</h3>
+    <uib-alert ng-show="editedPerson === true" type="success" close="editedPerson = false">{{ person.name }} edited!</uib-alert>
+    <form class="navbar-form">
+      <input type="text" placeholder="Name" class="form-control" ng-model="person.name">
+      <br>
+      <br>
+      <input type="number" placeholder="Age" class="form-control" ng-model="person.age">
+      <br>
+      <br>
+      <input type="text" placeholder="Email" class="form-control" ng-model="person.email">
+      <br>
+      <button class="btn btn-primary" ng-click="pc.updatePerson(person);editedPerson = true">Update</button>
+    </form>
+    <button class="btn btn-danger" ng-click="showEditDialog = false">Close</button>
+  </div>
+</div>
