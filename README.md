@@ -1,6 +1,7 @@
 # contacts
 by Braxton Brewton | braxtonbrewton@gmail.com
 
+### What is this?
 A contact list web application made using Laravel v5.2 and AngularJS v1.5.5.
 
 Performs all CRUD operations.
