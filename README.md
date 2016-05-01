@@ -14,4 +14,4 @@ In your terminal, run `bower init`
 
 Modify the `config/database.php` and `.env` file to reflect your MySQL database setup
 
-Run `php artisan migrate` to instantiate tables in your MySQL DB
+Run `php artisan migrate` to instantiate tables in your MySQL database
