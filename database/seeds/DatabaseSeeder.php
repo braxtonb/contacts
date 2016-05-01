@@ -23,9 +23,9 @@ class PeopleTableSeeder extends Seeder {
 		DB::table('people')->delete();
 
 		$people = array(
-				['name' => 'Braxton', 'age' => 21, 'email' => 'braxtonbrewton@gmail.com'],
-				['name' => 'Lydia', 'age' => 44, 'email' => 'la@gmail.com'],
-				['name' => 'Francis', 'age' => 27, 'email' => 'lpnclex@gmail.com']
+				['name' => 'Lebron James', 'age' => 31, 'email' => 'kingjames@gmail.com'],
+				['name' => 'Kawhi Leonard', 'age' => 24, 'email' => 'humblepie_kawhi@gmail.com'],
+				['name' => 'Kobe Bryant', 'age' => 37, 'email' => 'blackmamba@gmail.com']
 			);
 
 		foreach($people as $person) {
